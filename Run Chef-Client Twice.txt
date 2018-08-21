@@ -1,0 +1,38 @@
+[ec2-user@ip-10-0-1-207 chef-repo]$ sudo chef-client --local-mode webserver.rb
+[2018-08-21T06:04:14+00:00] WARN: No config file found or specified on command line, using command line options.
+[2018-08-21T06:04:14+00:00] WARN: No cookbooks directory found at or above current directory.  Assuming /home/ec2-user/chef-repo.
+Starting Chef Client, version 13.8.5
+resolving cookbooks for run list: []
+Synchronizing Cookbooks:
+Installing Cookbook Gems:
+Compiling Cookbooks...
+[2018-08-21T06:04:16+00:00] WARN: Node ip-10-0-1-207.ap-southeast-2.compute.internal has an empty run list.
+Converging 1 resources
+Recipe: @recipe_files::/home/ec2-user/chef-repo/webserver.rb
+  * yum_package[httpd] action install
+    - install version 2.4.6-80.el7_5.1 of package httpd
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 1/1 resources updated in 08 seconds
+[2018-08-21T06:04:23+00:00] WARN: No config file found or specified on command line, using command line options.
+
+
+
+[ec2-user@ip-10-0-1-207 chef-repo]$ sudo chef-client --local-mode webserver.rb
+[2018-08-21T06:05:42+00:00] WARN: No config file found or specified on command line, using command line options.
+[2018-08-21T06:05:42+00:00] WARN: No cookbooks directory found at or above current directory.  Assuming /home/ec2-user/chef-repo.
+Starting Chef Client, version 13.8.5
+resolving cookbooks for run list: []
+Synchronizing Cookbooks:
+Installing Cookbook Gems:
+Compiling Cookbooks...
+[2018-08-21T06:05:44+00:00] WARN: Node ip-10-0-1-207.ap-southeast-2.compute.internal has an empty run list.
+Converging 1 resources
+Recipe: @recipe_files::/home/ec2-user/chef-repo/webserver.rb
+  * yum_package[httpd] action install (up to date)
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 0/1 resources updated in 04 seconds
+[2018-08-21T06:05:46+00:00] WARN: No config file found or specified on command line, using command line options.
